@@ -1,5 +1,6 @@
 import React, {Component, useState} from "react";
 import '../styles/App.css';
+import Para from "./Para";
 
 class App extends Component {
     constructor(props) {
