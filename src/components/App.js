@@ -5,22 +5,22 @@ class App extends Component {
     constructor(props) {
 		super(props);
 		this.state = {
-			para: ''
+			text: ''
 		}
 		this.handleClick = this.handleClick.bind(this);
 
 	};
 
 	handleClick() {
-		this.state.para === '' ? this.setState({para: 'Hello, I\'ve learnt to use the full-stack evaluation tool. This makes me so happy'}) : this.setState({para: ''});
+		this.setState({text: 'Hello, I\'ve learnt to use the full-stack evaluation tool. This makes me so happy'});
 	}
 
     render() {
-		const { para } = this.state;
+		const { para, text } = this.state;
 		// para === '' ? para: '';
     	return(
     		<div id="main">
-				<p id="para">{para}</p>
+				<Para paraText={text}/>
 				<button onClick={this.handleClick} id="click">click</button>
 				{ /* Do not remove this main div!! */ }
     		</div>
