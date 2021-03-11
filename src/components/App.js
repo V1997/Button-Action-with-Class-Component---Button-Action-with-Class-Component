@@ -1,5 +1,6 @@
 import React, {Component, useState} from "react";
 import '../styles/App.css';
+import Welcome from "./Welcome";
 
 class App extends Component {
     constructor(props) {
@@ -9,6 +10,7 @@ class App extends Component {
     render() {
     	return(
     		<div id="main">
+				<Welcome greeting="vasu"/>
 				{ /* Do not remove this main div!! */ }
     		</div>
     	);
