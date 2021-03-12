@@ -6,14 +6,15 @@ class App extends Component {
     constructor(props) {
 		super(props);
 		this.state = {
-			text: ''
+			text: '',
+			visible: false
 		}
 		this.handleClick = this.handleClick.bind(this);
 
 	};
 
 	handleClick() {
-		this.setState({text: 'Hello, I\'ve learnt to use the full-stack evaluation tool. This makes me so happy'});
+		this.setState({visible: true});
 	}
 
     render() {
@@ -21,7 +22,7 @@ class App extends Component {
 		// para === '' ? para: '';
     	return(
     		<div id="main">
-				<Para paraText={text}/>
+				{	visible ? <Para /> : null		}
 				<button onClick={this.handleClick} id="click">click</button>
 				{ /* Do not remove this main div!! */ }
     		</div>
@@ -29,6 +30,4 @@ class App extends Component {
     }
 }
 
-
 export default App;
-
