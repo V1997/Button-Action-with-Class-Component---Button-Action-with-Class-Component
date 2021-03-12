@@ -17,13 +17,11 @@ class App extends Component {
 	}
 
     render() {
-		const { para, text } = this.state;
-		// para === '' ? para: '';
-    	return(
+      	return(
     		<div id="main">
+				{ /* Do not remove this main div!! */ }
 				{	this.state.visible ? <Para /> : ''		}
 				<button onClick={this.handleClick} id="click">click</button>
-				{ /* Do not remove this main div!! */ }
     		</div>
     	);
     }
