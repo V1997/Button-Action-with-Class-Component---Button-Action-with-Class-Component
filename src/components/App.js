@@ -6,8 +6,7 @@ class App extends Component {
     constructor(props) {
 		super(props);
 		this.state = {
-			text: '',
-			visible: false
+ 			visible: false
 		}
 		this.handleClick = this.handleClick.bind(this);
 
@@ -22,7 +21,7 @@ class App extends Component {
 		// para === '' ? para: '';
     	return(
     		<div id="main">
-				{	visible ? <Para /> : null		}
+				{	this.state.visible ? <Para /> : ''		}
 				<button onClick={this.handleClick} id="click">click</button>
 				{ /* Do not remove this main div!! */ }
     		</div>
